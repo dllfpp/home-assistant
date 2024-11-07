@@ -1,5 +1,5 @@
 blueprint:
-  name: Update Entity Offset with Switch
+  name: Update Entity Offset with Switch 🔥🌡️
   description: Update the offset attribute of an entity based on another sensor's state, with an on/off control
   domain: automation
   input:
