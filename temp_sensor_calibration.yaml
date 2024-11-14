@@ -59,17 +59,18 @@ condition:
         before: !input end_time
       - condition: or
         conditions:
-          # Case when the switch is off: ignore the 'HEAT' condition
+          # Case when the switch is off: ignore the 'HEATING' condition
           - condition: template
             value_template: "{{ enable_switch == false }}"
-          # Case when the switch is on: ensure the state is 'HEAT'
+          # Case when the switch is on: ensure the state is 'HEATING'
           - condition: and
             conditions:
               - condition: template
                 value_template: "{{ enable_switch == true }}"
               - condition: state
                 entity_id: !input entity_to_update
-                state: 'heat'
+                attribute: hvac_action
+                state: heating
 
 action:
   - if:
