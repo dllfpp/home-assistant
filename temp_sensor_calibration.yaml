@@ -46,7 +46,7 @@ blueprint:
       default: 15
       selector:
         number:
-          min: 1
+          min: 10
           max: 60
           unit_of_measurement: minutes
     enable_switch:
